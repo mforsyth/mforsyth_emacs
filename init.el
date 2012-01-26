@@ -33,30 +33,30 @@
 (require 'el-get)
 
 (setq el-get-sources
-      '((:name magit :type elpa
+      '((:name css-mode :type elpa)
+        (:name inf-ruby  :type elpa)
+        (:name magit :type elpa
                :after (lambda () 
                         (global-set-key (kbd "C-x g") 'magit-status)
                         ))
+        (:name rhtml
+               :type git
+               :url "https://github.com/eschulte/rhtml.git"
+               :features rhtml-mode)
         (:Name ruby-mode 
                :type elpa
                :load "ruby-mode.el")
-        (:name inf-ruby  :type elpa)
         (:name ruby-compilation :type elpa)
-        (:name css-mode :type elpa)
-        (:name textmate
-               :type git
-               :url "git://github.com/defunkt/textmate.el"
-               :load "textmate.el")
         (:name rvm
                :type git
                :url "http://github.com/djwhitt/rvm.el.git"
                :load "rvm.el"
                :compile ("rvm.el")
                :after (lambda() (rvm-use-default)))
-        (:name rhtml
+        (:name textmate
                :type git
-               :url "https://github.com/eschulte/rhtml.git"
-               :features rhtml-mode)
+               :url "git://github.com/defunkt/textmate.el"
+               :load "textmate.el")
         (:name yaml-mode 
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
