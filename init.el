@@ -5,7 +5,7 @@
 (setq default-frame-alist
       (append default-frame-alist
               '(
-                (width . 150) (height . 40)
+                (width . 160) (height . 40)
                 )))
 
 (setq make-backup-files nil)
