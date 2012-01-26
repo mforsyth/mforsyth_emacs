@@ -34,7 +34,8 @@
 
 (setq el-get-sources
       '((:name css-mode :type elpa)
-        (:name inf-ruby  :type elpa)
+        (:name haml-mode :type elpa)
+        (:name inf-ruby :type elpa)
         (:name magit :type elpa
                :after (lambda () 
                         (global-set-key (kbd "C-x g") 'magit-status)
@@ -53,6 +54,7 @@
                :load "rvm.el"
                :compile ("rvm.el")
                :after (lambda() (rvm-use-default)))
+        (:name sass-mode :type elpa)
         (:name textmate
                :type git
                :url "git://github.com/defunkt/textmate.el"
