@@ -160,6 +160,7 @@
 ;; global keys
 (global-set-key (kbd "C-c mep") 'open-emacs-profile)
 (global-set-key (kbd "C-c s") 'vc-git-grep)
+(global-set-key (kbd "C-c r") 'replace-regexp)
 (global-set-key (kbd "C-x M-m") 'shell)
 (global-set-key (kbd "C-x m") 'eshell)
 
