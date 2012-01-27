@@ -64,10 +64,8 @@
                :url "http://github.com/yoshiki/yaml-mode.git"
                :features yaml-mode)))
 (el-get 'sync)
-
-;; git grep
 (require 'vc-git)
-(global-set-key (kbd "C-c s") 'vc-git-grep)
+
 
 ; mini ruby snippets
 (defun ruby-debug() (interactive)
@@ -158,9 +156,10 @@
 (defun open-emacs-profile () (interactive)
   (find-file "~/.emacs.d/init.el")
   )
-(global-set-key (kbd "C-c mep") 'open-emacs-profile)
 
-;; shells
+;; global keys
+(global-set-key (kbd "C-c mep") 'open-emacs-profile)
+(global-set-key (kbd "C-c s") 'vc-git-grep)
 (global-set-key (kbd "C-x M-m") 'shell)
 (global-set-key (kbd "C-x m") 'eshell)
 
