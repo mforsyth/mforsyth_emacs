@@ -125,7 +125,9 @@
             (auto-fill-mode)
             ))
 
+;; file extensions
 (setq auto-mode-alist (cons '("\\.rake\\'" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.yml\\'" . yaml-mode) auto-mode-alist))
 
 
 ;; themes
