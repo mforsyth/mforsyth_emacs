@@ -1,4 +1,6 @@
 el-get/*
 elpa/*
 auto-save-list/*
+eshell/history
+eshell/lastdir
 *~
