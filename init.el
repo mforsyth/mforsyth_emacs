@@ -112,7 +112,6 @@
   )
 (add-hook 'rhtml-mode-hook
           (lambda ()
-            (rinari-launch)
             (define-key rhtml-mode-map (kbd "C->") 'erb-tags)
             (define-key rhtml-mode-map (kbd "C-#") 'string-interpolate)
             (define-key rhtml-mode-map (kbd "C-=") 'hash-boundary)
