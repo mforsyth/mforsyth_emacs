@@ -1,3 +1,4 @@
+
 ;; emacs configuration
 (push "/usr/local/bin" exec-path)
 
@@ -13,7 +14,7 @@
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq inhibit-startup-message t)
-(setq mac-command-modifier 'meta) 
+(setq mac-command-modifier 'meta)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (delete-selection-mode t)
@@ -29,7 +30,7 @@
 (require 'package)
 (setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
 (package-initialize)
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get") 
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
 
 (setq el-get-sources
@@ -37,14 +38,14 @@
         (:name haml-mode :type elpa)
         (:name inf-ruby :type elpa)
         (:name magit :type elpa
-               :after (lambda () 
+               :after (lambda ()
                         (global-set-key (kbd "C-x g") 'magit-status)
                         ))
         (:name rhtml
                :type git
                :url "https://github.com/eschulte/rhtml.git"
                :features rhtml-mode)
-        (:Name ruby-mode 
+        (:Name ruby-mode
                :type elpa
                :load "ruby-mode.el")
         (:name ruby-compilation :type elpa)
@@ -59,7 +60,7 @@
                :type git
                :url "git://github.com/defunkt/textmate.el"
                :load "textmate.el")
-        (:name yaml-mode 
+        (:name yaml-mode
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
                :features yaml-mode)))
@@ -151,6 +152,8 @@
      (set-face-attribute 'magit-item-highlight nil :underline 0)
      ))
 
+;; trailing whitespace
+(setq-default show-trailing-whitespace t)
 
 ; shortcut to open this file
 (defun open-emacs-profile () (interactive)
@@ -163,4 +166,5 @@
 (global-set-key (kbd "C-c r") 'replace-regexp)
 (global-set-key (kbd "C-x M-m") 'shell)
 (global-set-key (kbd "C-x m") 'eshell)
-
+(global-set-key (kbd "C-x m") 'eshell)
+(global-set-key (kbd "C-c w s") 'delete-trailing-whitespace)
