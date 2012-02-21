@@ -45,6 +45,14 @@
                :type git
                :url "https://github.com/eschulte/rhtml.git"
                :features rhtml-mode)
+        (:name rspec-mode
+               :type git
+               :url "git@github.com:mforsyth/rspec-mode.git"
+               :features rspec-mode
+               :after (lambda ()
+                        (setq rspec-use-rake-flag nil)
+                        (setq rspec-spec-command "rspec")
+                        ))
         (:Name ruby-mode
                :type elpa
                :load "ruby-mode.el")
