@@ -53,7 +53,7 @@
                         (setq rspec-use-rake-flag nil)
                         (setq rspec-spec-command "rspec")
                         ))
-        (:Name ruby-mode
+        (:name ruby-mode
                :type elpa
                :load "ruby-mode.el")
         (:name ruby-compilation :type elpa)
