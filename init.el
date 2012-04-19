@@ -80,6 +80,11 @@
   (insert "debugger\nfoo = 'bar'")
   (indent-for-tab-command)
   )
+(defun pry() (interactive)
+  (insert "binding.pry\n")
+  (previous-line)
+  (indent-for-tab-command)
+  )
 (defun string-interpolate() (interactive)
   (insert "#{}")
   (backward-char 1)
@@ -96,6 +101,7 @@
             (define-key ruby-mode-map (kbd "C-c C-e") 'string-block)
             (define-key ruby-mode-map (kbd "C-=") 'hash-boundary)
             (define-key ruby-mode-map (kbd "C-c d") 'ruby-debug)
+            (define-key ruby-mode-map (kbd "C-c p") 'pry)
             ))
 
 ; rhtml-mode
