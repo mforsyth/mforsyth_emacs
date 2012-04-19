@@ -102,6 +102,7 @@
             (define-key ruby-mode-map (kbd "C-=") 'hash-boundary)
             (define-key ruby-mode-map (kbd "C-c d") 'ruby-debug)
             (define-key ruby-mode-map (kbd "C-c p") 'pry)
+            (define-key ruby-mode-map (kbd "C-c ,s") 'rspec-verify-single)
             ))
 
 ; rhtml-mode
