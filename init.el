@@ -82,6 +82,7 @@
   )
 (defun pry() (interactive)
   (insert "binding.pry\n")
+  (indent-for-tab-command)
   (previous-line)
   (indent-for-tab-command)
   )
