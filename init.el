@@ -33,7 +33,8 @@
 (require 'el-get)
 
 (setq el-get-sources
-      '((:name css-mode :type elpa)
+      '((:name coffee-mode :type elpa)
+        (:name css-mode :type elpa)
         (:name haml-mode :type elpa)
         (:name inf-ruby :type elpa)
         (:name magit :type elpa
