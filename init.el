@@ -51,6 +51,7 @@
                :features rspec-mode
                :after (lambda ()
                         (setq rspec-use-rake-flag nil)
+                        (setq rspec-use-rvm t)
                         (setq rspec-spec-command "rspec")
                         ))
         (:name ruby-mode
@@ -136,6 +137,7 @@
             (define-key rhtml-mode-map (kbd "C-c d") 'ruby-debug)
             (define-key rhtml-mode-map (kbd "C-c M-l") 'link-to-region)
             (define-key rhtml-mode-map (kbd "C-c M-l") 'link-to-region)
+            (define-key rhtml-mode-map (kbd "C-c p") 'pry)
             (auto-fill-mode)
             ))
 
