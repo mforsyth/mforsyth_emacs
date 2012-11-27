@@ -194,3 +194,10 @@
 (global-set-key (kbd "C-c w s") 'delete-trailing-whitespace)
 
 (setq feature-cucumber-command "bash --login -c \"bundle exec rake cucumber CUCUMBER_OPTS=\\\"{options}\\\" FEATURE=\\\"{feature}\\\"\"")
+
+(defun beautify-json ()
+  (interactive)
+  (let ((b (if mark-active (min (point) (mark)) (point-min)))
+        (e (if mark-active (max (point) (mark)) (point-max))))
+    (shell-command-on-region b e
+     "python -mjson.tool" (current-buffer) t)))
