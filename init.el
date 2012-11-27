@@ -27,7 +27,9 @@
 
 ;; package management: el-get
 (require 'package)
-(setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
