@@ -39,6 +39,7 @@
         (:name css-mode :type elpa)
         (:name haml-mode :type elpa)
         (:name inf-ruby :type elpa)
+        (:name feature-mode :type elpa)
         (:name magit :type elpa
                :after (lambda ()
                         (global-set-key (kbd "C-x g") 'magit-status)
@@ -191,3 +192,5 @@
 (global-set-key (kbd "C-x m") 'eshell)
 (global-set-key (kbd "C-x m") 'eshell)
 (global-set-key (kbd "C-c w s") 'delete-trailing-whitespace)
+
+(setq feature-cucumber-command "bash --login -c \"bundle exec rake cucumber CUCUMBER_OPTS=\\\"{options}\\\" FEATURE=\\\"{feature}\\\"\"")
