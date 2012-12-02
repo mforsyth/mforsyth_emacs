@@ -25,6 +25,11 @@
 (set-fringe-style -1)
 (tooltip-mode -1)
 
+;; helm (included here because it doesn't seem to work with elpa)
+(add-to-list 'load-path "/Users/andalucien/.emacs.d/helm")
+(require 'helm-config)
+(global-set-key (kbd "C-c h") 'helm-mini)
+
 ;; package management: el-get
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
