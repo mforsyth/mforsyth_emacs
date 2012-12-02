@@ -111,8 +111,16 @@
             (define-key ruby-mode-map (kbd "C-c ,s") 'rspec-verify-single)
             (define-key ruby-mode-map (kbd "C->") 'erb-tags)
             ))
+(defun coffeerocket() (interactive)
+  (insert " ->")
+)
+(defun debugger() (interactive)
+  (insert "debugger\n")
+)
 (add-hook 'coffee-mode-hook  (lambda ()
             (define-key coffee-mode-map (kbd "C-=") 'hashrocket)
+            (define-key coffee-mode-map (kbd "C--") 'coffeerocket)
+            (define-key coffee-mode-map (kbd "C-c d") 'debugger)
             ))
 
 ; rhtml-mode
