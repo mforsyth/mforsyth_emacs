@@ -120,7 +120,7 @@
   (insert " ->")
 )
 (defun debugger() (interactive)
-  (insert "debugger\n")
+  (insert "debugger")
 )
 (add-hook 'coffee-mode-hook  (lambda ()
             (define-key coffee-mode-map (kbd "C-=") 'hashrocket)
