@@ -161,7 +161,7 @@
             (define-key rhtml-mode-map (kbd "C-c M-l") 'link-to-region)
             (define-key rhtml-mode-map (kbd "C-c M-l") 'link-to-region)
             (define-key rhtml-mode-map (kbd "C-c p") 'pry)
-            (auto-fill-mode)
+            (auto-fill-mode nil)
             ))
 
 ;; file extensions
