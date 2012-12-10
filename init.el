@@ -125,7 +125,7 @@
   (insert "debugger")
 )
 (add-hook 'coffee-mode-hook  (lambda ()
-            (define-key ruby-mode-map (kbd "C-#") 'string-interpolate)
+            (define-key coffee-mode-map (kbd "C-#") 'string-interpolate)
             (define-key coffee-mode-map (kbd "C-=") 'hashrocket)
             (define-key coffee-mode-map (kbd "C--") 'coffeerocket)
             (define-key coffee-mode-map (kbd "C-c d") 'debugger)
