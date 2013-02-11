@@ -74,7 +74,11 @@
                :load "rvm.el"
                :compile ("rvm.el")
                :after (lambda() (rvm-use-default)))
-        (:name sass-mode :type elpa)
+        (:name sass-mode
+               :type elpa
+               :after (lambda ()
+                        (setq scss-compile-at-save nil)
+                        ))
         (:name textmate
                :type git
                :url "git://github.com/defunkt/textmate.el"
