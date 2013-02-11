@@ -135,6 +135,10 @@
             (define-key coffee-mode-map (kbd "C-c d") 'debugger)
             ))
 
+(add-hook 'haml-mode-hook  (lambda ()
+            (define-key haml-mode-map (kbd "C-#") 'string-interpolate)
+            ))
+
 ; rhtml-mode
 (add-to-list 'load-path "~/.emacs.d/vendor/rhtml/")
 (require 'rhtml-mode)
@@ -172,6 +176,7 @@
 (setq auto-mode-alist (cons '("\\.rake\\'" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.yml\\'" . yaml-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Gemfile" . yaml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.hamlc\\'" . haml-mode) auto-mode-alist))
 
 
 ;; themes
