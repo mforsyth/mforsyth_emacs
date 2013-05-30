@@ -222,7 +222,7 @@
 (global-set-key (kbd "C-x m") 'eshell)
 (global-set-key (kbd "C-c w s") 'delete-trailing-whitespace)
 
-(setq feature-cucumber-command "bash --login -c \"bundle exec rake cucumber CUCUMBER_OPTS=\\\"{options}\\\" FEATURE=\\\"{feature}\\\"\"")
+(setq feature-cucumber-command "bash --login -c \"bundle exec rake cucumber CUCUMBER_FORMAT=pretty CUCUMBER_OPTS=\\\"{options}\\\" FEATURE=\\\"{feature}\\\"\"")
 
 (defun beautify-json ()
   (interactive)
