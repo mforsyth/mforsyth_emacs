@@ -219,7 +219,6 @@
 (global-set-key (kbd "C-c r") 'replace-regexp)
 (global-set-key (kbd "C-x M-m") 'shell)
 (global-set-key (kbd "C-x m") 'eshell)
-(global-set-key (kbd "C-x m") 'eshell)
 (global-set-key (kbd "C-c w s") 'delete-trailing-whitespace)
 
 (setq feature-cucumber-command "bash --login -c \"bundle exec rake cucumber CUCUMBER_FORMAT=pretty CUCUMBER_OPTS=\\\"{options}\\\" FEATURE=\\\"{feature}\\\"\"")
